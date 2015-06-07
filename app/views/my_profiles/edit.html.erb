@@ -1,0 +1,19 @@
+<br />
+<div class="container">
+	<div class="panel panel-default">
+	  	<div class="panel-heading">
+	  		<h1 class="panel-title">Editing My Profile</h1>
+	  	</div>
+
+		<%= render 'form' %>
+
+		<div class="panel-footer">
+			<%= link_to 'Destroy', @my_profile, method: :delete, data: { confirm: 'Are you sure?' } %> |
+			<%= link_to 'Back', :back %>
+		</div>
+	</div>
+</div>
+<br />
+<br />
+<br />
+<br />

@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  setTimeout(function(){
+    $('#alert').remove();
+  }, 5000);
+ })

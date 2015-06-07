@@ -1,0 +1,11 @@
+<%if !admin_signed_in? %>	
+	<% if user_signed_in? %>
+	  <li>
+	  <%= link_to('', destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-off") %>        
+	  </li>
+	<% else %>
+	  <li>
+	  <%= button_to('Sign In', new_user_session_path, method: :get, class: "btn btn-success btn-sm navbar-btn") %>  
+	  </li>
+	<% end %>
+<% end %>

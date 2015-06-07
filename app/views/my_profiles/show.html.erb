@@ -1,0 +1,82 @@
+<br />
+<div class="container">
+	<div class="panel panel-default">
+		<div class="container">
+			<br />
+			<div class="row">
+				<div class="col-md-3">
+					<%= image_tag @my_profile.avatar.url(:medium), class: "img-thumbnail" %>
+				</div>
+				<div class="col-md-3">
+					<h3><%= current_user.name %></h3>
+					<h4><%= @my_profile.secondname %></h4>
+					<h5><%= @my_profile.age %></h5>
+					<p class="text-justify"><strong><%= @my_profile.bio %></strong></p>
+				</div>
+				<div class="col-md-4 col-md-offset-1">
+					<div class="text-justify" id="index-info">
+						<h3>Breaking News</h3>
+						<hr />
+						<h4>Total World Users: <strong><%= @user.count %></strong></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br />
+		<div class="panel-footer">
+			<%= link_to 'Edit Profile', edit_my_profile_path(@my_profile) %> |
+			<%= link_to 'Back', welcome_index_path %>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<div id="paypal">
+				<h3>Frist Step</h3>
+				<br />
+				<img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" border="0" alt="PayPal Logo" class="img-thumnail" />
+				<br />
+				<br />
+				<div class="text-justify">
+					<p>Payment´s in PayPal It´s as simple as putting an email and password. If you do not have a PayPal account, you can use any type of bank card payment method.</p>
+				</div>
+				<br />
+				<br />
+				<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8GZ9JU4JE5ATA">Subscribe</a>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div id="paypal">
+				<h3>Second Step</h3>
+				<br />
+				<img src="<%= asset_path 'open-book-restaurant.jpg' %>" id="secondsteep" />
+				<br />
+				<br />
+				<div class="text-justify">
+					<p>Once you have paid, you have to send us information and photos of your business that you want to put in your advertising page.</p>
+				</div>
+				<br />
+				<br />
+				<a href="https://drive.google.com/folderview?id=0BwbS7zk77wtjfnBsSUlhRS0wcUE5YUh6cFk2V1EyaTB1YTZaZ2VaamVLVG1ia0ItYnNnMVU&usp=sharing" target="_top">Send Photos</a>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div id="paypal">
+				<h3>Third Step</h3>
+				<br />
+				<img src="http://www.funai.gov.br/arquivos/conteudo/cggeo/img/PDF_downlaod.png" id="secondsteep" />
+				<br />
+				<br />
+				<div class="text-justify">
+					<p>Every year in June, we sent the prints. In that month you will see the result in a PDF that you can download by clicking on this button.</p>
+				</div>
+				<br />
+				<br />
+				<a href="#">Download PDF</a>
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+

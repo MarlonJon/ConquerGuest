@@ -1,14 +1,83 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>ConquerGuest</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>ConquerGuest</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="container">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="<%= root_path %>">
+        		<img alt="Brand" src="<%= asset_path "namecg.png" %>">
+      		  </a>
+		    </div>
 
-<%= yield %>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		        <ul class="nav navbar-nav navbar-right">
+		          <%= render 'devise/menu/login_items' %>
+		          <%= render 'devise/menu/registration_items' %>
+		        </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		<div class="container">
+			<%= render 'devise/menu/alert' %>
+		</div>
+		<%= render 'layouts/terms_and_conditions' %>
 
-</body>
+		<%= yield %>
+			<br />
+			<br />
+			<footer>
+				<br />
+				<br />
+				<div class="footer">
+					<div class="container-fluid">
+						<div class="container">
+							<div class="col-md-4">
+								<ul>
+									<li><a href="#">About</a></li>
+									<li><a href="#">ConquerGuest.com B.V.</a></li>
+									<li><a href="#" data-toggle="modal" data-target="#myModal">Term and Conditions</a></li>
+									<li><a href="https://docs.google.com/forms/d/1O24pM3CpijEpweF_j00VhliIeCS2PPmuQvpqHk7DDEM/viewform?usp=send_form">Contact</a></li>
+									<%= render 'devise/menu/admin_login' %>									
+								</ul>
+							</div>
+							<div class="col-md-4">								
+								<p>ConquerGuest.com B.V. | Holland</p>								
+							</div>
+							<div class="col-md-4 col-xs-12">
+								<div class="row">
+									<div class="col-md-3 col-xs-3">
+										<a href="https://es-es.facebook.com/conquer.guest" target="_blank"><img src="<%= asset_path 'social/face.png' %>" class="social" alt="FaceBook" /></a></li>
+									</div>
+									<div class="col-md-3 col-xs-3">
+										<a href="#"><img src="<%= asset_path 'social/insta.png' %>" class="social" alt="Instagram" /></a></li>
+									</div>
+									<div class="col-md-3 col-xs-3">
+										<a href="https://twitter.com/conquerguest" target="_blank"><img src="<%= asset_path 'social/twi.png' %>" class="social" alt="Twitter" /></a></li>
+									</div>
+									<div class="col-md-3 col-xs-3">
+										<a href="http://enigmatic-caverns-8653.herokuapp.com/" target="_blank"><img src="<%= asset_path 'social/portafolio.png' %>" class="social" alt="portafolio" /></a></li>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br />
+				<br />
+				<br />
+			</footer>
+	</body>
 </html>

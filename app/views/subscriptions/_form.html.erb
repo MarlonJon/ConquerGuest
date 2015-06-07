@@ -1,0 +1,32 @@
+<div class="panel-body">
+  <div class="form-group">
+    <%= form_for(@subscription) do |f| %>
+      <% if @subscription.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+          <div id="error_explanation">
+            <h2><%= pluralize(@subscription.errors.count, "error") %> prohibited this subscription from being saved:</h2>
+
+            <ul>
+            <% @subscription.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+      
+      <form>
+        <div class="form-group">
+          <div class="field">
+            <%= f.label :name %>
+            <%= f.text_field :name, class: "form-control" %><br />          
+            <%= f.label :email %>
+            <%= f.text_field :email, class: "form-control" %><br />
+            <%= f.check_box :terms %>&nbsp;<a href="#" data-toggle="modal" data-target="#myModal"><%= f.label :terms_and_conditions %></a><br />
+            <%= f.submit class: "btn btn-success btn-sm" %>
+          </div>
+        </div>
+      </form>
+    <% end %>
+  </div>
+</div>

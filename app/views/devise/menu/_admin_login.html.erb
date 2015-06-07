@@ -1,0 +1,11 @@
+<% if !current_admin == current_admin %>
+	<%= link_to 'Create Admin', new_admin_registration_path %>
+<% else %>
+	<% if admin_signed_in? %>
+		<li><%= link_to 'Close Session', destroy_admin_session_path, method: :delete, data: { confirm: "Are you sure?"} %></li>
+	<% else %>
+		<% if !user_signed_in? %>
+			<li><%= link_to 'Admin Panel', new_admin_session_path %></li>
+		<% end %>
+	<% end %>
+<% end %>

@@ -26,6 +26,8 @@ gem 'paperclip', '~> 4.2.1'
 gem 'bootstrap-sass', '~> 3.3.4.1'
 # Intelligent search made easy
 gem 'searchkick', '~> 0.8.7'
+# Send e-mail straight from forms in Rails with I18n
+gem 'mail_form', '~> 1.5.1'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
